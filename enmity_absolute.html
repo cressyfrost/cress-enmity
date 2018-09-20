@@ -18,34 +18,17 @@
       <div id="target">
         <!-- Target Name area-->
         <div class="box">
-          <div class="gauge {{target | hpcolor}}" style="width: {{target.HPPercent}}%"></div>
           <div class="name">
-            <span class="header">ターゲット: </span>
-            <span class="value">{{target.Name}}</span>
+            <span class="value">Enmity List - {{target.Name}}</span>
           </div>
         </div>
-        <!-- HP and Gauge area-->
-        <div>
-          <span class="header">HP: </span>
-          <span class="value">{{target.HPPercent}}%&emsp;({{target.CurrentHP.toLocaleString()}}/{{target.MaxHP.toLocaleString()}})</span>
-        </div>
-        <!-- Time-to-Death and Distance area -->
-        <div>
-          <span class="header">Time to Death: </span>
-          <span class="value">{{target.TimeToDeath}}</span>
-          <div style="float: right">
-            <span class="header">距離: </span>
-            <span class="value">{{target.Distance}}m ({{target.EffectiveDistance}}m)</span>
-          </div>
-        </div>
-      </div>
       <!-- end of Target -->
 
       <!-- Enmity Entries (敵視情報) -->
       <div id="entries" class="box {{target.type != 2 ? 'hide' : ''}}" v-repeat="e: entries">
         <!-- Name -->
         <div class="content">
-          <span class="name {{e.isMe ? 'me' : '' }}">{{$index + 1}}.{{e | you}}</span>
+          <span class="name {{e.isMe ? 'me' : '' }}">{{$index + 1}}. {{e | you}}</span>
           <span class="enmity">{{e.EnmityString}}</span>
         </div>
         <!-- Gauge -->

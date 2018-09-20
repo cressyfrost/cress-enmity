@@ -1,6 +1,6 @@
 * {
-  font-family: "Meiryo";
-  font-size: 12px;
+  font-family:'맑은 고딕' !important;
+  font-size: 11px;
   font-weight: normal;
   box-sizing: border-box;
 }
@@ -105,7 +105,6 @@ body {
 }
 
 #target {
-  border-bottom: 1px solid #DED7BE;
   color: #DED7BE;
   text-shadow: -1px 0 2px #795516, 0 1px 2px #795516, 1px 0 2px #795516, 0 -1px 2px #795516;
   font-weight: 300;
@@ -155,6 +154,7 @@ body {
   color: #E2EBF5;
   text-shadow: -1px 0 3px #217AA2, 0 1px 3px #217AA2, 1px 0 3px #217AA2, 0 -1px 3px #217AA2;
   font-weight: 300;
+ 
 }
 
 #entries .content .me {
@@ -166,13 +166,17 @@ body {
   position: relative;
   bottom: 0;
   clear: both;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+
 }
 
 #entries .gauge {
   position: absolute;
   display: block;
-  bottom: 2px;
-  height: 5px;
+  bottom: 0px;
+  height: 16px;
   z-index: -1;
 }
 
